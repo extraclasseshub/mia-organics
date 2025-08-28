@@ -6,6 +6,14 @@ export default function ContactSection() {
     window.open('https://wa.me/27734798500?text=Hi! I would like to learn more about your organic sea moss products.', '_blank');
   };
 
+  const handleCall = () => {
+    window.open('tel:+27734798500', '_self');
+  };
+
+  const handleEmail = () => {
+    window.open('mailto:info@miasorganics.co.za?subject=Inquiry about Sea Moss Products', '_self');
+  };
+
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-sky-500 via-sky-600 to-cyan-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,16 +41,33 @@ export default function ContactSection() {
 
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 text-center hover:bg-white/15 transition-all">
             <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Phone className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
+            <p className="text-sky-100 mb-4">+27 73 479 8500</p>
+            <button
+              onClick={handleCall}
+              className="bg-white/20 text-white px-6 py-2 rounded-lg hover:bg-white/30 transition-colors"
+            >
+              Call Now
+            </button>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 text-center hover:bg-white/15 transition-all">
+            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
               <Mail className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
             <p className="text-sky-100 mb-4">info@miasorganics.co.za</p>
-            <button className="bg-white/20 text-white px-6 py-2 rounded-lg hover:bg-white/30 transition-colors">
+            <button
+              onClick={handleEmail}
+              className="bg-white/20 text-white px-6 py-2 rounded-lg hover:bg-white/30 transition-colors"
+            >
               Send Email
             </button>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 text-center hover:bg-white/15 transition-all md:col-span-2 lg:col-span-1">
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 text-center hover:bg-white/15 transition-all lg:col-span-3">
             <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
               <Clock className="w-8 h-8 text-white" />
             </div>

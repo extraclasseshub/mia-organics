@@ -67,10 +67,7 @@ const infoContent = {
           <h4 className="font-semibold text-gray-800 mb-2">How do I consume sea moss gel?</h4>
           <p className="text-gray-600">Take 1-2 tablespoons daily. Mix into smoothies, teas, or consume directly. Start with smaller amounts and gradually increase.</p>
         </div>
-        <div>
-          <h4 className="font-semibold text-gray-800 mb-2">How long does sea moss gel last?</h4>
-          <p className="text-gray-600">When refrigerated, our sea moss gel stays fresh for up to 3 weeks. Always use clean utensils when serving.</p>
-        </div>
+        
         <div>
           <h4 className="font-semibold text-gray-800 mb-2">Is your sea moss organic?</h4>
           <p className="text-gray-600">Yes! Our sea moss is wildcrafted from pristine ocean waters and processed without any chemicals or additives.</p>

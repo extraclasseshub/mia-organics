@@ -9,6 +9,8 @@ import Cart, { CartItem } from './components/Cart';
 import InfoModal from './components/InfoModal';
 import CheckoutForm, { CustomerDetails } from './components/CheckoutForm';
 import { Product } from './components/ProductCard';
+import ScrollToTop from './components/ScrollToTop';
+import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
@@ -157,6 +159,9 @@ ${customerDetails.specialInstructions ? `📝 SPECIAL INSTRUCTIONS:\n${customerD
         onClose={handleInfoClose}
         type={infoModal.type}
       />
+      
+      <ScrollToTop />
+      <WhatsAppButton />
     </div>
   );
 }

@@ -57,14 +57,7 @@ export default function ProductModal({ product, isOpen, onClose, onAddToCart }: 
             <div>
               <h2 className="text-3xl font-bold text-gray-800 mb-4">{product.name}</h2>
               
-              <div className="flex items-center gap-2 mb-4">
-                <div className="flex text-yellow-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" />
-                  ))}
-                </div>
-                <span className="text-gray-600">(4.9/5 - 127 reviews)</span>
-              </div>
+             
               
               <div className="mb-6">
                 <div className="flex items-center gap-4 mb-2">
@@ -97,10 +90,7 @@ export default function ProductModal({ product, isOpen, onClose, onAddToCart }: 
                   Add to Cart - R{product.price}
                 </button>
                 
-                <div className="text-center text-sm text-gray-500">
-                  <p>✓ Free shipping on orders over R500</p>
-                  <p>✓ 30-day money-back guarantee</p>
-                </div>
+                
               </div>
             </div>
           </div>

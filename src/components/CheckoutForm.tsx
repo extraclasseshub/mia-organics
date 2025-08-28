@@ -72,7 +72,7 @@ export default function CheckoutForm({ isOpen, onClose, items, onSubmitOrder }: 
     if (!formData.address.trim()) newErrors.address = 'Address is required';
     if (!formData.city.trim()) newErrors.city = 'City is required';
     if (!formData.postalCode.trim()) newErrors.postalCode = 'Postal code is required';
-    if (!formData.province) newErrors.province = 'Province is required';
+    if (!formData.province) newErrors.province = 'Province is requi';
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;

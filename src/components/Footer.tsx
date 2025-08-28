@@ -17,7 +17,6 @@ export default function Footer({ onInfoClick }: FooterProps) {
                 alt="Mia's Organics Logo" 
                 className="h-10 w-auto object-contain"
               />
-             
             </div>
             <p className="text-gray-400 max-w-md">
               Premium organic sea moss products for your health and wellness journey. 
@@ -52,17 +51,47 @@ export default function Footer({ onInfoClick }: FooterProps) {
           <div>
             <h4 className="text-lg font-semibold mb-4">Support</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><button onClick={() => onInfoClick('shipping')} className="hover:text-sky-400 transition-colors text-left">Shipping Info</button></li>
-              <li><button onClick={() => onInfoClick('returns')} className="hover:text-sky-400 transition-colors text-left">Returns</button></li>
-              <li><button onClick={() => onInfoClick('faq')} className="hover:text-sky-400 transition-colors text-left">FAQ</button></li>
-              <li><button onClick={() => onInfoClick('health')} className="hover:text-sky-400 transition-colors text-left">Health Benefits</button></li>
+              <li>
+                <button 
+                  onClick={() => onInfoClick('shipping')} 
+                  className="hover:text-sky-400 transition-colors text-left"
+                >
+                  Shipping Info
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => onInfoClick('faq')} 
+                  className="hover:text-sky-400 transition-colors text-left"
+                >
+                  FAQ
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => onInfoClick('health')} 
+                  className="hover:text-sky-400 transition-colors text-left"
+                >
+                  Health Benefits
+                </button>
+              </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 text-center">
-          <p className="text-gray-400">
-            © 2025 Mia's Organics. All rights reserved. Made with love for your wellness.
+        {/* Bottom Section */}
+        <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm flex flex-col sm:flex-row justify-between items-center">
+          <p>© 2025 Mia's Organics. All rights reserved.</p>
+          <p className="mt-2 sm:mt-0">
+            Crafted by{' '}
+            <a 
+              href="https://xannietechs.co.za" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-sky-400 hover:text-sky-300 font-medium"
+            >
+              Xannie Techs
+            </a>
           </p>
         </div>
       </div>

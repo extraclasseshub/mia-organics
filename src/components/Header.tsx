@@ -18,13 +18,16 @@ export default function Header({ cartItemCount, onCartClick }: HeaderProps) {
     <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50 border-b-2 border-sky-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-3">
+          <button 
+            onClick={() => window.location.reload()}
+            className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
+          >
             <img 
               src="/logo.png" 
               alt="Mia's Organics Logo" 
               className="h-8 w-auto object-contain"
             />
-          </div>
+          </button>
           
           <nav className="hidden md:flex items-center space-x-8">
             <button

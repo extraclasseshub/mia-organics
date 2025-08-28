@@ -42,7 +42,10 @@ export default function Cart({ isOpen, onClose, items, onUpdateQuantity, onRemov
             <div className="text-center py-12">
               <p className="text-gray-500 mb-4">Your cart is empty</p>
               <button
-                onClick={onClose}
+                onClick={() => {
+                  onClose();
+                  document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="bg-sky-500 text-white px-6 py-2 rounded-lg hover:bg-sky-600 transition-colors"
               >
                 Continue Shopping

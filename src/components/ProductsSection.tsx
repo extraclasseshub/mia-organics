@@ -40,6 +40,18 @@ export default function ProductsSection({ onAddToCart }: ProductsSectionProps) {
         '/7.jpg',
         '/8.jpg'
       ]
+    },
+    {
+      id: '3',
+      name: 'Raw Sea Moss - Family Pack',
+      price: 580,
+      weight: '1kg',
+      image: '/sea-mos.jpg',
+      description: 'Large family pack of pure, dried sea moss. Perfect for families or those who use sea moss regularly.',
+      details: 'Wildcrafted raw sea moss in a convenient 1kg family pack, sun-dried to preserve maximum nutritional value. This versatile superfood can be soaked and blended into gel form, or ground into powder. Contains natural sea minerals and is completely organic. Each batch is carefully inspected for quality. Great value for regular sea moss users.',
+      images: [
+        '/sea-mos.jpg'
+      ]
     }
   ];
 
