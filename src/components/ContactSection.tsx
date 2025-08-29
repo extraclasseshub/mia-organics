@@ -84,9 +84,23 @@ export default function ContactSection() {
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 inline-block">
             <div className="flex items-center justify-center gap-2 text-white mb-2">
               <MapPin className="w-5 h-5" />
-              <span className="font-semibold">Serving Nationwide</span>
+              <span className="font-semibold">Our Location</span>
             </div>
+            <div className="text-sky-100 space-y-1">
+              <p className="font-medium">20/5915 Danie Theron Street</p>
+              <p>Heuwel Manor</p>
+              <p>Emalahleni, 1034</p>
+              <p className="text-sm mt-3 border-t border-white/20 pt-3">
+                Serving nationwide with fast delivery
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8 text-center">
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 inline-block">
             <p className="text-sky-100">
+              <Truck className="w-4 h-4 inline mr-2" />
               Fast delivery across South Africa with our premium courier service
             </p>
           </div>
