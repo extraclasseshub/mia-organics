@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Twitter, Mail } from 'lucide-react';
 
 interface FooterProps {
@@ -58,6 +59,14 @@ export default function Footer({ onInfoClick }: FooterProps) {
                 >
                   Shipping Info
                 </button>
+              </li>
+              <li>
+                <Link 
+                  to="/return-policy" 
+                  className="hover:text-sky-400 transition-colors"
+                >
+                  Return Policy
+                </Link>
               </li>
               <li>
                 <button 

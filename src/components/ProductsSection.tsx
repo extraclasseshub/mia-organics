@@ -12,7 +12,7 @@ export default function ProductsSection({ onAddToCart }: ProductsSectionProps) {
 
   const products: Product[] = [
     {
-      id: '1',
+      id: 'sea-moss-gel',
       name: 'Sea Moss Gel',
       price: 150,
       volume: '350ml jar',
@@ -27,7 +27,7 @@ export default function ProductsSection({ onAddToCart }: ProductsSectionProps) {
       ]
     },
     {
-      id: '2',
+      id: 'raw-sea-moss',
       name: 'Raw Sea Moss',
       price: 150,
       weight: '79g',
@@ -42,7 +42,7 @@ export default function ProductsSection({ onAddToCart }: ProductsSectionProps) {
       ]
     },
     {
-      id: '3',
+      id: 'raw-sea-moss-family-pack',
       name: 'Raw Sea Moss - Family Pack',
       price: 580,
       weight: '1kg',

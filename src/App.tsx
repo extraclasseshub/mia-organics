@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import AboutSection from './components/AboutSection';
@@ -11,6 +12,9 @@ import CheckoutForm, { CustomerDetails } from './components/CheckoutForm';
 import { Product } from './components/ProductCard';
 import ScrollToTop from './components/ScrollToTop';
 import WhatsAppButton from './components/WhatsAppButton';
+import ProductPage from './pages/ProductPage';
+import ReturnPolicy from './pages/ReturnPolicy';
+import HomePage from './pages/HomePage';
 
 function App() {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
@@ -132,11 +136,19 @@ ${customerDetails.specialInstructions ? `📝 SPECIAL INSTRUCTIONS:\n${customerD
   return (
     <div className="min-h-screen">
       <Header cartItemCount={cartItemCount} onCartClick={() => setIsCartOpen(true)} />
-      <Hero />
-      <AboutSection />
-      <ProductsSection onAddToCart={addToCart} />
-      <ContactSection />
-      <Footer onInfoClick={handleInfoClick} />
+      
+      <Routes>
+        <Route path="/" element={
+          <HomePage 
+            onAddToCart={addToCart} 
+            onInfoClick={handleInfoClick}
+          />
+        } />
+        <Route path="/product/:productId" element={
+          <ProductPage onAddToCart={addToCart} />
+        } />
+        <Route path="/return-policy" element={<ReturnPolicy />} />
+      </Routes>
       
       <Cart
         isOpen={isCartOpen}

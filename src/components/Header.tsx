@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { ShoppingCart, Menu, X } from 'lucide-react';
 
 interface HeaderProps {
@@ -8,9 +9,14 @@ interface HeaderProps {
 
 export default function Header({ cartItemCount, onCartClick }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const location = useLocation();
 
   const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname === '/') {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.location.href = `/#${id}`;
+    }
     setIsMobileMenuOpen(false);
   };
 
@@ -18,8 +24,8 @@ export default function Header({ cartItemCount, onCartClick }: HeaderProps) {
     <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50 border-b-2 border-sky-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <button 
-            onClick={() => window.location.reload()}
+          <Link 
+            to="/"
             className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
           >
             <img 
@@ -27,7 +33,7 @@ export default function Header({ cartItemCount, onCartClick }: HeaderProps) {
               alt="Mia's Organics Logo" 
               className="h-8 w-auto object-contain"
             />
-          </button>
+          </Link>
           
           <nav className="hidden md:flex items-center space-x-8">
             <button
